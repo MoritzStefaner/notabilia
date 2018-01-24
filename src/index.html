@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Notabilia &ndash; Visualizing Deletion Discussions on Wikipedia</title>
+
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="../blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="fonts/1709-ZESCHJ.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+
+</head>
+
+<body style="margin:0; padding:0;">
+	<div id="deleted" class="vis-container">
+	</div>
+
+
+	<div class="container">
+		<p class="help">
+			<strong>How to read the visualization above:</strong>
+			<br/> Discussions are represented by a thread starting at the bottom center. Each time a user recommends to keep, merge, or
+			redirect the article, a
+			<span style="color: #229b71">green</span> segment leaning towards the left is added. Each time a user recommends to delete the article, a
+			<span style="color: #982b6f">red</span> segment leaning towards the right is added. As the discussion progresses, the length of the segments as well
+			as the angle slowly decay.</p>
+		<a href="http://ten.wikipedia.org" title="Happy 10th birthday, Wikipedia!">
+			<img id="wiki10" src="img/wikipedia10_simple1.png" width="45" alt="Wikipedia 10th anniversary logo" />
+		</a>
+		<div class="titlewrap">
+			<h1 style="margin:0;">Notabilia</h1>
+			<h2 style="font-size:1.5em; margin:.5em;">Visualizing Deletion Discussions on Wikipedia</h2>
+			<h3 style="font-size:1.1em; color:#555;font-weight:300">
+				<a class="inv" href="http://moritz.stefaner.eu/">Moritz Stefaner</a> &bull;
+				<a class="inv" href="http://nitens.org/taraborelli">Dario Taraborelli</a> &bull;
+				<a class="inv" href="http://www.inf.usi.ch/phd/ciampaglia/">Giovanni Luca Ciampaglia</a>
+			</h3>
+		</div>
+		<p class="abstract">
+			<!--<a href="http://wikipedia.org" target="_blank">Wikipedia</a> is an open encyclopedia that anyone can edit.-->As Doc Searls recently put it, Wikipedia is, like the protocols of the Net, "a set of agreements". A Web protocol defines
+			the way in which computers communicate with each other and make decisions to ensure successful transactions. Wikipedia
+			policies have the same purpose, but instead of transactions between machines, they regulate human decisions. An important
+			part of these decisions bear on
+			<em>what topics are suitable for inclusion</em> in Wikipedia and
+			<em>what topics are not</em>.
+			<!--As any writer knows, this is perhaps the most delicate editorial issue ever. -->The present project looks into the nature and shape of collective decisions about the inclusion of a topic in Wikipedia.
+		</p>
+		<h3 style="margin-top: 2em">Notable topics and AfD discussions</h3>
+		<p>Like a garden, an online encyclopedia needs constant weeding. Unlike a garden, an online encyclopedia has thousands of
+			potential gardeners. Over years Wikipedia has developed guidelines and policies to help editors
+			<em>collectively decide</em> whether topics are suitable for inclusion or not. All articles, especially new ones, are reviewed
+			by the community to determine if they meet Wikipedia's
+			<a href="http://en.wikipedia.org/wiki/Wikipedia:Notability" target="_blank">notability guidelines</a>. Any editor can nominate an article for deletion and, if this nomination is legitimate, a community
+			discussion takes place where any fellow
+			<strike>gardeners</strike> editors have the opportunity to make their voices heard. The usual process is to have a week-long discussion
+			during which community members can discuss in favor or against keeping the article. At the end of this period an administrator
+			reviews the discussion and speaks the final verdict. </p>
+		<p>
+			We analyzed and visualized
+			<a href="http://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion" target="_blank">Article for Deletion (AfD)</a> discussions in the English Wikipedia. The visualization above represents the 100 longest
+			discussions that resulted in the deletion of the respective article. AfD discussions are represented by a thread starting
+			at the bottom center. Each time a user joins an AfD discussion and recommends to
+			<em>keep</em>,
+			<em>merge</em>, or
+			<em>redirect</em> the article a green segment leaning towards the left is added. Each time a user recommends to
+			<em>delete</em> the article a red segment leaning towards the right is added. As the discussion progresses, the length of
+			the segments as well as the angle slowly decay.
+		</p>
+		<p>What decides whether consensus is reached is the administrator closing the AfD discussion, not a headcount. As a result,
+			the proportion of
+			<em>Keeps</em> and
+			<em>Deletes</em> may be at odds with the final decision, as illustrated by the above visualization. AfD discussions also take
+			a variety of shapes depending on how they evolve over time.</p>
+		<hr class="space" />
+		<h3 style="margin-bottom: .5em">Varieties of AfD patterns</h3>
+
+		<div class="pattern">
+
+			<img src="img/shots/newcoldwar_768.png" alt="straight AfD sample" />
+			<h4>Controversial</h4>
+			<p class="caption">Particularly controversial discussions where
+				<em>Deletes</em> and
+				<em>Keeps</em> alternate tend to follow a straight line as opposing opinions balance each other and consensus is hard to
+				reach.
+			</p>
+		</div>
+		<div class="pattern">
+
+			<img class="clearfix" src="img/shots/churchofreality_768.png" alt="s-shaped AfD sample" />
+			<h4>Swinging</h4>
+			<p class="caption">Discussions follow an s-shaped trajectory when a series of
+				<em>Deletes</em> is followed by a consistent series of
+				<em>Keeps</em> or vice versa. This pattern may indicate that participants with similar opinions flock together and join the
+				discussion at the same time.</p>
+		</div>
+		<div class="pattern">
+			<img class="clearfix" src="img/shots/spaghetti_768.png" alt="spiral-like AfD sample" />
+			<h4>Unanimous</h4>
+			<p class="caption">Unanimous discussions tend to get curly. An ideal discussion in which there is a total agreement among participants will
+				approximately look like a
+				<a href="http://en.wikipedia.org/wiki/Logarithmic_spiral">logarithmic spiral</a>.</p>
+		</div>
+
+		<hr class="space" />
+		<p>
+			The following visualization represents the 100 longest discussions that did
+			<em>not</em> result in the deletion of the article (i.e the article was kept, merged or redirected):
+		</p>
+	</div>
+	<div id="kept" class="vis-container"></div>
+	<div class="container">
+		<h3>Some interesting facts about AfD discussions</h3>
+		<p>
+			Articles can be nominated for deletion multiple times. The decision to keep the article resulting from an AfD can be overturned
+			by a new nomination at a later time: the article "Sexuality of Robert Baden-Powell", for example, was deleted at the 4th
+			nomination after 2 discussions ending with no consensus and one ending with a
+			<em>Keep</em> decision.
+		</p>
+		<p>
+			Long AfD discussions are exceptional and not all AfD discussions are as crowded as those represented above. The longest AfD
+			discussions do not give a representative picture of how this process works in most cases. The
+			<a href="#ref">analysis of a large sample of AfD discussions</a> (200K discussions that took place between November 2002 and July 2010)
+			suggests that the largest part of these discussions ends after only a few recommendations are expressed.
+		</p>
+	</div>
+
+	<img class="full-width" src="img/votesPerLength.png" />
+
+	<div class="container">
+		<p>
+			Splitting up the chart by the outcome of the discussion, and the vote distribution, reveals some interesting facts:
+			<ul>
+				<li>Not all AfD discussions start with a
+					<em>Delete</em> recommendation: sometimes the initial nominator suggests to merge or redirect the entry.</li>
+				<li>A typical discussion consists of only three or four recommendations. In most cases these discussions are so short simply
+					because the topic under discussion is trivially non-notable.</li>
+				<li>Quite a few discussions are closed with a
+					<em>Keep</em> decision right after the initial nomination (thereby overriding the nomination). Deletion decisions occurring
+					after only one recommendation is expressed, in comparison, are much less frequent.</li>
+				<li>Delete decisions tend to be fairly unanimous. In contrast, we found many
+					<em>Keep</em> decisions resulting from a discussion that leaned towards deletion: this can happen if no clear consensus
+					emerged from the discussion, or if participants advocating deletion did not appeal to the right policy. In general,
+					this means that administrators tend to apply the deletion guidelines in a conservative way.</li>
+			</ul>
+		</p>
+	</div>
+
+	<img class="full-width" src="img/split.png" />
+
+	<div class="container">
+		<ul>
+			<li>
+				<a href="#ref">Further analysis</a> shows that consensus is often hard to reach. The figure below (left) shows the distribution of
+				<em>duration</em> (in seconds) of AfD discussions. While the vast majority lasts
+				<em>less than one week</em>, there is a sizable minority that takes up to two weeks or more. Some discussions took more than
+				one year to be closed!</li>
+			<li>How passionate are these discussions? The figure below (right) shows the distribution of
+				<em>activity rates</em> (in "votes" per second), i.e. how fast new participants join a discussion. In general,
+				<em>one new participant per day</em> is the norm but in many cases the activity rate can increase to one new participant
+				every half an hour.</li>
+		</ul>
+	</div>
+
+	<div style="padding: 1.4em">
+		<center>
+			<img height=250 src="img/duration_hist.png" />
+			<img height=250 src="img/activity_hist.png" />
+		</center>
+	</div>
+
+	<div class="container">
+		<p id="ref">More analyses of Wikipedia's AfD discussions can be found in:
+			<br/>
+			<p class="citation">
+				D. Taraborelli, G.L. Ciampaglia (2010) Beyond Notability. Collective Deliberation on Content Inclusion in Wikipedia.
+				<em>Fourth IEEE International Conference on Self-Adaptive and Self-Organizing Systems Workshops</em> (SASOW '10).
+				<a href="http://nitens.org/docs/qteso10.pdf">[PDF]</a>
+			</p>
+		</p>
+		<p>
+			This project is the result of a collaboration between
+			<a href="http://nitens.org/taraborelli">Dario Taraborelli</a>,
+			<a href="http://www.inf.usi.ch/phd/ciampaglia/">Giovanni Luca Ciampaglia</a> (data and analysis) and
+			<a href="http://moritz.stefaner.eu/">Moritz Stefaner</a> (visualization).
+		</p>
+		<p>The interactive visualizations were built with
+			<strike>
+				<a href="http://www.adobe.com/products/flash/whatisflash/" target="_blank">Flash</a>,
+				<a href="http://flare.prefuse.org" target="_blank">Flare</a> and
+				<a href="http://www.fdt.powerflasher.com/" target="_blank">FDT</a>
+			</strike>
+			<a href="https://d3js.org">d3</a> and
+			<a href="https://reactjs.org">react</a>. The static charts were produced with
+			<a href="http://www.tableausoftware.com/" target="_blank">Tableau</a>. A dataset with the 500 longest AfD discussions in Wikipedia as of July 2010 is freely available on
+			<a href="https://spreadsheets.google.com/ccc?key=0AkLl_vAH_M7EdDVhR0JrU2dkTFY3ODBVYmw3VDdHM0E&hl=en&authkey=CKnF3ogD">Google Docs</a>.
+		</p>
+		<p>Questions? Suggestions? Get in touch:
+			<SCRIPT LANGUAGE="JavaScript">
+				user = 'team';
+				site = 'notabilia.net';
+				document.write('<a href=\"mailto:' + user + '@' + site + '\">');
+				document.write(user + '@' + site + '</a>');
+			</SCRIPT>
+		</p>
+		<div>
+			<h3 style="text-align:left; width: 40rem; max-width: 95%; margin: 2em auto 1em !important;">Updates</h3>
+			<ul id="changelog" style="text-align:left; width: 40rem; max-width: 95%; margin: .5em auto !important; padding: 0;">
+				<li>
+					<strong>2018-01-24</strong>&emsp; License changed to CC BY-SA</li>
+				<li>
+					<strong>2018-01-08</strong>&emsp; Technology update: Flash -> HTML 5</li>
+				<li>
+					<strong>2012-11-10</strong>&emsp;&ensp; Gold at the
+					<a href="https://www.informationisbeautifulawards.com/showcase/443-notabilia">Information is Beauiful Awards</a>
+				</li>
+				<li>
+
+					<strong>2010-01-23</strong>&emsp; Updated dataset to fix some AfD inconsistencies</li>
+				<li>
+					<strong>2010-01-10</strong>&emsp; First release</li>
+			</ul>
+		</div>
+		<div class="footer">
+			<table cellspacing="0">
+				<tr>
+					<td colspan="2" style="font-size: 90%">
+						M. Stefaner, D. Taraborelli, G.L. Ciampaglia (2011)
+						<em>Notabilia &ndash; Visualizing Deletion Discussions on Wikipedia</em>.
+						<a href="http://notabilia.net">http://notabilia.net</a>
+					</td>
+				</tr>
+				<tr style="">
+					<!-- CC -->
+					<td style="vertical-align: middle; padding-top: 2em;">
+						<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+							<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+						</a>
+					</td>
+					<td style="color: #333; font-size: 80%; padding-top: 2em;">
+						The contents of this website are licensed under a
+						<a style="color: #333" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA License</a>.
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="jsx/main.jsx" charset="utf-8"></script>
+
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-20647070-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+</body>
+
+</html>

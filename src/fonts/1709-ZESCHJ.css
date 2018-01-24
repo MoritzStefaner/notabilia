@@ -1,0 +1,85 @@
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2017 Schwartzco Inc.
+        License: 1709-ZESCHJ     
+*/
+
+@font-face {
+  font-family: "Atlas Grotesk Web";
+  src: url("AtlasGrotesk-MediumItalic-Web.eot");
+  src: url("AtlasGrotesk-MediumItalic-Web.eot?#iefix")
+      format("embedded-opentype"),
+    url("AtlasGrotesk-MediumItalic-Web.woff2") format("woff2"),
+    url("AtlasGrotesk-MediumItalic-Web.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-MediumItalic-Web {
+  font-family: "Atlas Grotesk Web";
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Atlas Grotesk Web";
+  src: url("AtlasGrotesk-Medium-Web.eot");
+  src: url("AtlasGrotesk-Medium-Web.eot?#iefix") format("embedded-opentype"),
+    url("AtlasGrotesk-Medium-Web.woff2") format("woff2"),
+    url("AtlasGrotesk-Medium-Web.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-Medium-Web {
+  font-family: "Atlas Grotesk Web";
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Atlas Grotesk Web";
+  src: url("AtlasGrotesk-LightItalic-Web.eot");
+  src: url("AtlasGrotesk-LightItalic-Web.eot?#iefix")
+      format("embedded-opentype"),
+    url("AtlasGrotesk-LightItalic-Web.woff2") format("woff2"),
+    url("AtlasGrotesk-LightItalic-Web.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-LightItalic-Web {
+  font-family: "Atlas Grotesk Web";
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Atlas Grotesk Web";
+  src: url("AtlasGrotesk-Light-Web.eot");
+  src: url("AtlasGrotesk-Light-Web.eot?#iefix") format("embedded-opentype"),
+    url("AtlasGrotesk-Light-Web.woff2") format("woff2"),
+    url("AtlasGrotesk-Light-Web.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.AtlasGrotesk-Light-Web {
+  font-family: "Atlas Grotesk Web";
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
