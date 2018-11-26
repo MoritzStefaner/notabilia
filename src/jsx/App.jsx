@@ -38,18 +38,22 @@ export default class App extends React.Component {
           let segLength = SEGMENTLENGTH;
           let angle = -0.5 * Math.PI;
           d.points = d.sequence.map((p, i) => {
-            pen.x += Math.cos(angle) * segLength;
-            pen.y += Math.sin(angle) * segLength;
-            if (p === "K") {
+            if (p === "0") {
+              //
+            } else if (p === "K") {
               angle -= angleStep;
             } else {
               angle += angleStep;
             }
+            pen.x += Math.cos(angle) * segLength;
+            pen.y += Math.sin(angle) * segLength;
+
             angleStep *= ANGLESTEP_DECAY;
             segLength *= SEGMENTLENGTH_DECAY;
 
             return { x: pen.x, y: pen.y, type: p };
           });
+
           d.points.unshift({ x: 0, y: 0 });
 
           d.lines = pairs(d.points).map(([a, b], i) => (
@@ -72,7 +76,7 @@ export default class App extends React.Component {
 
     if (this.hoveredItem) {
       const angleDeg =
-        (this.hoveredItem.endPoint.angle * 180 / Math.PI + 360 * 100) % 360;
+        ((this.hoveredItem.endPoint.angle * 180) / Math.PI + 360 * 100) % 360;
       const flipped = angleDeg > 90 && angleDeg < 270;
 
       hoverEl = (
