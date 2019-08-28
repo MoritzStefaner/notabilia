@@ -1,4 +1,7 @@
-# notabilia
+# Notabilia
+This repository includes the code that powers *Notabilia*:
+
+>M. Stefaner, D. Taraborelli, G.L. Ciampaglia (2011) Notabilia – Visualizing Deletion Discussions on Wikipedia. http://notabilia.net
 
 # Usage
 Run
